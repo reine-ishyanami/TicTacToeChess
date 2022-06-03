@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -76,6 +77,8 @@ public class Main extends Application {
         Scene scene = new Scene(borderPane);
         primaryStage.setScene(scene);
         primaryStage.setTitle("井字棋");
+        Image ico = new Image("images/logo.png");
+        primaryStage.getIcons().add(ico);
         primaryStage.setWidth(400);
         primaryStage.setHeight(400);
         primaryStage.show();
@@ -168,7 +171,6 @@ public class Main extends Application {
                     gridPane.getChildren().forEach(node -> node.setDisable(true));
                     break;
                 default:
-
             }
         });
 
